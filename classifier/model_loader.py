@@ -8,6 +8,7 @@ import io
 class ImageClassifier:
     def __init__(self, model_path, num_classes):
         # Define the model architecture for multi-label classification
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model = resnet50(pretrained=False)
 
         # Freeze feature extractor layers
@@ -24,7 +25,8 @@ class ImageClassifier:
         )
 
         # Load the model weights
-        self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+        self.model.load_state_dict(torch.load(model_path, map_location=device))
+        self.model.to(device)
         self.model.eval()  # Set to evaluation mode
 
         # Define the image transformation for preprocessing
