@@ -1,0 +1,50 @@
+# General Python
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+
+# Virtual Environment
+env/
+venv/
+.virtualenv/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+*.pot
+*.py[co]
+
+# PyTorch
+*.pth
+*.pt
+
+# Environment variables
+.env
+
+# IDE and Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+
+# Temporary files
+*.bak
+*.tmp
+~*
+
+# Testing related
+.coverage
+htmlcov/
+nosetests.xml
+*.cover
+*.log
