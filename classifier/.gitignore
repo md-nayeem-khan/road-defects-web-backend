@@ -9,20 +9,10 @@ env/
 venv/
 .virtualenv/
 
-# Django
-db.sqlite3
-media/
-staticfiles/
 *.log
 *.pot
 *.py[co]
 
-# PyTorch
-*.pth
-*.pt
-
-# Environment variables
-.env
 
 # IDE and Editor specific
 .vscode/
