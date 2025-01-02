@@ -8,7 +8,7 @@ import io
 class ImageClassifier:
     def __init__(self, model_path, num_classes):
         # Define the model architecture for multi-label classification
-        self.model = resnet50(pretrained=True)
+        self.model = resnet50(pretrained=False)
 
         # Freeze feature extractor layers
         for param in self.model.parameters():
